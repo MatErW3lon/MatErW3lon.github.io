@@ -60,12 +60,12 @@ a {
     flex-grow: 1;
 }
 
-#nav-bar .nav-bar-list {
+#nav-bar .nav-bar-list-desktop-view {
     display: flex;
     list-style: none;
 }
 
-#nav-bar .nav-bar-list li {
+#nav-bar .nav-bar-list-desktop-view li {
     --distance-from-edge: 0.5rem;
 
     position: relative;
@@ -147,9 +147,34 @@ a {
 }
 
 /*Push the elements to the right*/
-#nav-bar .nav-bar-list li:nth-of-type(1){
+#nav-bar .nav-bar-list-desktop-view li:nth-of-type(1){
     margin-left: auto;
 } 
+
+#nav-bar .nav-bar-list-mobile-view {
+    display: none;
+}
+
+@media only screen and (max-width: 580px){
+    #nav-bar .nav-bar-list-desktop-view {
+        display: none;
+    }  
+    
+    #nav-bar .nav-bar-list-mobile-view {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-menu {
+        margin-left: auto;
+    }
+
+    #nav-bar #horizontal-rule-aesthetic {
+        display: none;
+    }
+
+}
+
 
 /*----------------------*/
 
@@ -188,12 +213,9 @@ a {
     padding-right: 2vw;
 }
 
-
-
-
 .item-1 #main-heading {
     font-family: 'Roboto Mono', sans-serif,  system-ui;
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
 .item-1 #main-heading::first-letter {
@@ -202,7 +224,7 @@ a {
 
 .item-1 #main-sub-heading {
     font-family: 'Roboto Mono', sans-serif, system-ui;
-    font-size: clamp(1rem, 3vw, 2.5rem);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
 }
 
 #role-2, #role-3 {

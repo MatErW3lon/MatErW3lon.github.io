@@ -1,0 +1,266 @@
+/*Global styles*/
+:root {
+    --clr-navbar-background: transparent;
+    --clr-navbar-hr: white;
+    --clr-navbar-li-border: white;
+    --clr-navbar-li-selected: #31E90D; 
+    --clr-role-span: var(--clr-navbar-li-selected);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    z-index: 10;
+    top: 100vh;
+    background-color: wheat;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.image-container {
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    display: block;
+    max-width: 100%;
+  }
+
+/*Nav Bar Styles*/
+#nav-bar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--clr-navbar-background);
+    
+}
+#nav-bar #horizontal-rule-aesthetic {
+    position: inherit;
+    top: 2rem;
+    height: 1px;
+    width: 100%;
+    background-color: var(--clr-navbar-hr);
+    z-index: -5;
+}
+
+#nav-bar nav {
+    flex-grow: 1;
+}
+
+#nav-bar .nav-bar-list {
+    display: flex;
+    list-style: none;
+}
+
+#nav-bar .nav-bar-list li {
+    --distance-from-edge: 0.5rem;
+
+    position: relative;
+    margin: 0 0.5rem;
+    clip-path: polygon(var(--distance-from-edge) 0, 100% 0%, calc(100% - var(--distance-from-edge)) 100%, 0 100%);
+    background-color: #211F1F;
+    padding: 0.5vw 1.5vw;
+    isolation: isolate;
+}
+
+.nav-bar-item::before,
+.nav-bar-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.nav-bar-item::before {
+    background-color: var(--clr-navbar-li-border);
+    z-index: -2;
+
+}
+
+.nav-bar-item::after{
+    background-color: #211F1F;
+    z-index: -1; 
+
+    /*The values below have been adjusted by trial-and-error*/
+    /*if the border gets too thin the media query has to kick in*/
+    clip-path: polygon(
+        10px 1px, 
+        97% 1px, 
+        89% 95%, 
+        3% 95%
+    );
+
+    transition: clip-path 250ms;
+}
+
+.longer-text::after {
+    /*The values below have been adjusted by trial-and-error*/
+    /*if the border gets too thin the media query has to kick in*/
+    clip-path: polygon(
+        10px 1px, 
+        97% 1px, 
+        92% 95%, 
+        2.5% 95%
+    );
+}
+
+.nav-bar-item:where(:hover, :focus)::after {
+    clip-path: polygon(
+        100% 1px, 
+        100% 1px, 
+        100% 95%, 
+        100% 95%
+    );
+}
+
+.nav-bar-item a {
+    letter-spacing: 0.75px;
+    font-size: clamp(0.5rem,1.75vw, 1rem);
+    font-family: 'Lato', sans-serif, system-ui;
+    text-transform: uppercase;
+    color: white;
+    transition: color 300ms;
+}
+
+.nav-bar-item a:hover {
+    color: black;
+}
+
+.nav-bar-item a:active {
+    color: var(--clr-navbar-li-border);
+}
+
+.nav-bar-item a:focus {
+    color: var(--clr-navbar-li-selected);
+}
+
+/*Push the elements to the right*/
+#nav-bar .nav-bar-list li:nth-of-type(1){
+    margin-left: auto;
+} 
+
+/*----------------------*/
+
+/*Banner Styles*/
+.banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    background-color: #211F1F;
+    background-image: url("../images/banner-bg.png");
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.banner .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 50%;
+}
+
+
+.container .item-1 {
+    color: white;
+    border-right: 1px solid white;
+    margin-left: 2vw;
+    margin-right: 5vw;
+    padding-right: 2vw;
+}
+
+
+
+
+.item-1 #main-heading {
+    font-family: 'Roboto Mono', sans-serif,  system-ui;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.item-1 #main-heading::first-letter {
+    font-size: clamp(3rem, 15vw, 7rem);
+}
+
+.item-1 #main-sub-heading {
+    font-family: 'Roboto Mono', sans-serif, system-ui;
+    font-size: clamp(1rem, 3vw, 2.5rem);
+}
+
+#role-2, #role-3 {
+    display: none;
+}
+
+.container .item-2 {
+    margin-right: 5vw;
+    width: 50%;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+.container .item-2 img {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: bottom;
+    border: 1.5px solid white;
+}
+
+.role{
+    font-family: 'Cormorant SC', sans-serif;
+    color: var(--clr-role-span);
+}
+
+@media only screen and (max-width: 580px) {
+    .banner .container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container .item-1{
+        padding: 0;
+        border: 0;
+        border-top: 1px solid white;
+        margin: 0;
+        margin-top: 1.25rem;
+        text-align: center;
+    }
+
+    .item-1 h1 {
+        width: 100%;
+
+    }
+
+    .container .item-2 {
+        margin: 0;
+    }
+
+}
+
+/*MAIN BODY*/
+main .about-me{
+    width: 80%;
+    margin: 5rem auto;
+    background-color: blue;
+    height: 1000px;
+}

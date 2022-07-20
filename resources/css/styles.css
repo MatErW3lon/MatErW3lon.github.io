@@ -203,7 +203,7 @@ a {
         padding: 0;
         height: 100%;
         margin-top: 0;
-        width: 0vw;
+        width: 0px;
         overflow: hidden;
     }
 
@@ -230,6 +230,7 @@ a {
     .menu-item a {
         color: white;
         text-transform: uppercase;
+        font-family: 'Cormorant SC', sans-serif;
     }
 
     .menu-item a:where(:hover, :active){

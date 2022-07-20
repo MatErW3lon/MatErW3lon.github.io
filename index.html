@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     
-    <script src="scripts/banner-role-animation.js" defer></script>
+    <script type="module" src="scripts/main.js" defer></script>
+
 
     <title>Muhammad Rowaha | Portfolio</title>
   
@@ -34,9 +34,16 @@
           <li class="nav-bar-item"><a href="#">Skills</a></li>
           <li class="nav-bar-item longer-text"><a href="#">Contact Me</a></li>
         </ul>
-        <ul class="nav-bar-list-mobile-view">
-          <li class="nav-menu"><box-icon name='menu' color='#ffffff' ></box-icon></li>
-        </ul>
+        <div class="nav-bar-list-mobile-view">
+          <div class="nav-menu"><img id="nav-menu" src="./resources/images/bx-menu.svg"/></div>
+          <ul class="menu">
+            <li class="menu-item"><a href="#">Home</a></li>
+            <li class="menu-item"><a href="#about-me">About Me</a></li>
+            <li class="menu-item"><a href="#">Education</a></li>
+            <li class="menu-item"><a href="#">Skills</a></li>
+            <li class="menu-item"><a href="#">Contact Me</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -46,7 +53,7 @@
           <h1 id="main-heading">Hi, I am Muhammad Rowaha</h1>
           <h2 id="main-sub-heading">
             And I am a
-            <span class="role" id="role-1">Computer Engineering Student</span>
+            <span class="role" id="role-1">CS Student</span>
           </h2>
         </div>
         <div class="item-2">

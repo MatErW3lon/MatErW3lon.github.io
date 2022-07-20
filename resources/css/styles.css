@@ -5,6 +5,7 @@
     --clr-navbar-li-border: white;
     --clr-navbar-li-selected: #31E90D; 
     --clr-role-span: var(--clr-navbar-li-selected);
+    --clr-main-theme : #211F1F;
 }
 
 * {
@@ -39,6 +40,7 @@ a {
 
 /*Nav Bar Styles*/
 #nav-bar {
+    z-index: 100; /*always keep the nav-bar on top*/
     display: flex;
     position: fixed;
     top: 0;
@@ -155,18 +157,94 @@ a {
     display: none;
 }
 
+.menu {
+    list-style: none;
+}
+
 @media only screen and (max-width: 580px){
+
+    #nav-bar{
+        position: fixed;
+        top : 0;
+        bottom : 0;
+        right: 0;
+    }
+
     #nav-bar .nav-bar-list-desktop-view {
         display: none;
     }  
     
     #nav-bar .nav-bar-list-mobile-view {
+        z-index: 20;
+        height: 100%;
         display: flex;
         list-style: none;
     }
 
     .nav-menu {
+        padding-top: 2rem;
+        padding-right: 0.125rem;
         margin-left: auto;
+
+    }
+
+
+    .nav-menu:hover{
+        cursor: pointer;
+    }
+
+    .menu {
+        /*display : none*/
+        display: flex;
+        flex-direction: column;
+        background-color: var(--clr-main-theme);
+        border: 1px solid white;
+        border-top: 0;
+        padding: 0;
+        height: 100%;
+        margin-top: 0;
+        width: 0vw;
+        overflow: hidden;
+    }
+
+    .menu-item{
+        display: inline-block;
+        width: 100%;
+        margin: .5rem 0;
+        margin-left: .75rem;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .menu-item:nth-of-type(1){
+        margin-top: auto;
+    }
+
+    /*Push the contact me to the center*/
+    .menu-item:nth-of-type(5) {
+        margin-top: auto;
+        margin-bottom: auto;
+
+    }
+
+    .menu-item a {
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .menu-item a:where(:hover, :active){
+        color: var(--clr-navbar-li-selected);
+    }
+
+    .menu-item:nth-of-type(5) a{
+        color: var(--clr-navbar-li-selected);
+        border: 0.5px solid var(--clr-navbar-li-selected);
+        padding: 0.75rem 0.25rem;    
+    }
+
+    .menu-item:nth-of-type(5) a:where(:hover, :active) {
+        color: white;
+        border: 0.5px solid white;
     }
 
     #nav-bar #horizontal-rule-aesthetic {
@@ -185,7 +263,7 @@ a {
     left: 0;
     right: 0;
     z-index: -10;
-    background-color: #211F1F;
+    background-color: var(--clr-main-theme);
     background-image: url("../images/banner-bg.png");
     background-position: center;
     background-repeat: repeat;
@@ -193,11 +271,13 @@ a {
     height: 100vh;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .banner .container {
     display: flex;
     align-items: center;
+    flex-basis: 100%;
     flex-wrap: nowrap;
     justify-content: space-around;
     width: 100%;
@@ -269,11 +349,16 @@ a {
     }
 
     .container .item-2 {
-        width: 50%;
+        width: 45%;
         margin: 0;
     }
 
+    .role {
+        display: block;
+    }
+
 }
+
 
 /*MAIN BODY*/
 main .about-me{

@@ -155,7 +155,8 @@ a {
     display: none;
 }
 
-@media only screen and (max-width: 580px){
+/*accounts for mobile view in landscape*/
+@media only screen and (max-width: 760px){
     #nav-bar .nav-bar-list-desktop-view {
         display: none;
     }  
@@ -252,9 +253,11 @@ a {
 
 @media only screen and (max-width: 580px) {
     .banner .container {
+        margin-top: auto;
         flex-direction: column-reverse;
         justify-content: center;
         width: fit-content;
+        height: fit-content;
         margin-left: auto;
         margin-right: auto;
     }
@@ -262,7 +265,6 @@ a {
     .container .item-1{
         padding: 0;
         border: 0;
-        border-top: 1px solid white;
         margin: 0;
         margin-top: 1.25rem;
         text-align: center;

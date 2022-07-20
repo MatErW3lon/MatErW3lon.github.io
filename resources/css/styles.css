@@ -226,10 +226,6 @@ a {
     font-size: clamp(1.75rem, 3vw, 2.5rem);
 }
 
-#role-2, #role-3 {
-    display: none;
-}
-
 .container .item-2 {
     margin-right: 5vw;
     width: 30%;

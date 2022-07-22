@@ -1,18 +1,18 @@
-<strong>PERSONAL PORTFOLIO WEBSITE</strong>
+<strong style="color : #31E90D">PERSONAL PORTFOLIO WEBSITE</strong>
 ======
 
 This is my personal portfolio website<br>
-My aim is to create a portfolio website which is <em>modular</em>, i.e I can insert or delete information as efficiently as possible
+My aim is to create a portfolio website which is _modular_, i.e I can insert or delete information as efficiently as possible
 ____________________________
 # Tools Used
 This is the list of the tools i have used for my portfolio website
 ```
-1. HTML
-2. CSS
+1. HTML5
+2. CSS3
 3. Javascript
 4. Git/Github
 5. GitHub Pages
-6. Svg
+6. ©Boxicons (SVG icons)
 ```
 ____________________________
 

@@ -200,6 +200,7 @@ a {
         background-color: var(--clr-main-theme);
         border: 1px solid white;
         border-top: 0;
+        border-bottom: 0;
         padding: 0;
         height: 100%;
         margin-top: 0;
@@ -327,6 +328,8 @@ a {
 }
 
 .container .item-2 {
+    position: relative;
+    top: 3.5rem;
     margin-right: 5vw;
     width: 30%;
     max-width: 400px;
@@ -345,7 +348,7 @@ a {
     color: var(--clr-role-span);
 }
 
-#resume-btn {
+.resume-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,12 +358,18 @@ a {
     padding: 0.25rem 1.75rem;
 }
 
-
-#resume-btn h3 {
+.resume-btn h3 {
     color: var(--clr-secondary-theme);
     letter-spacing: 5px;
-    font-family: 'Cormorant SC';
-    font-size: clamp(1rem, 2vw, 3rem);
+    font-family: 'Cormorant SC', sans-serif, system-ui;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.resume-btn h3:after {
+    content: '(Link Below)';
+    display: block;
+    font-size: 0.5em;
+    text-align: center;
 }
 
 @media only screen and (max-width: 580px) {

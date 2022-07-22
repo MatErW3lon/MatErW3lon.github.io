@@ -16,28 +16,28 @@ export function init(){
                     width: '0vw'
                 },
                 {
-                    width: '35vw',
+                    width: '40vw',
                     animationPlayState: 'paused'
                 }
             ],{
                 duration: 250,
                 iterations: 1
             });
-            menu.style.width = '35vw';
+            menu.style.width = '40vw';
             rollingStatus  = false;
         }else{
             banner.style.opacity = '1';
             button.innerHTML = '<img id="nav-menu" src="./resources/images/bx-menu.svg"/>';
             menu.animate([
                 {
-                    width: '35vw'
+                    width: '40vw'
                 },
                 {
                     width: '0vw',
                     animationPlayState: 'paused'
                 }
             ],{
-                duration: 100,
+                duration: 250,
                 iterations: 1
             });
             menu.style.width = '0vw';

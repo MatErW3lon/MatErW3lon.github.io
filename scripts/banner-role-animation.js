@@ -9,7 +9,7 @@ export function init(){
         let opacity = window.getComputedStyle(role1).getPropertyValue('opacity');
         let opacityNum = parseFloat(opacity);
         if(opacityState){
-            opacityNum -= 0.1;
+            opacityNum -= 0.05;
             opacity = opacityNum.toString();
             role1.style.opacity = opacity;
             if(opacity === '0'){
@@ -22,7 +22,7 @@ export function init(){
                 targetedRoleIndex++;
             }
         }else{
-            opacityNum += 0.1;
+            opacityNum += 0.05;
             opacity = opacityNum.toString();
             role1.style.opacity = opacity;
             if(opacity === '1'){
@@ -30,7 +30,7 @@ export function init(){
             }
         }   
     }
-    var timer = setInterval(fadeAnimation, 100);    
+    var timer = setInterval(fadeAnimation, 50);    
 }
 
 

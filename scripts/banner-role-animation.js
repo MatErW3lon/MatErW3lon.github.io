@@ -27,9 +27,10 @@ export function init(){
             if(opacity === '1'){
                 opacityState = true;
             }
-        }   
+        } 
+        setTimeout(fadeAnimation, 50);  
     }
-    var timer = setInterval(fadeAnimation, 50);    
+    fadeAnimation();     
 }
 
 

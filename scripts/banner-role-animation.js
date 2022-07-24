@@ -19,7 +19,6 @@ export function init(){
                 if(rolesIndex >= roles.length){
                     rolesIndex = 0;
                 }
-                targetedRoleIndex++;
             }
         }else{
             opacityNum += 0.05;

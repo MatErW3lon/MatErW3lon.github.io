@@ -8,15 +8,23 @@
     <meta name="description" content="<placeholder>"/>
     <meta name="keywords" content="<placeholder>"/>
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    
-    <link href="./resources/css/styles.css" type="text/css" rel="stylesheet"/>
+  
+    <link rel="icon" href="./resources/images/icon.ico"/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap" rel="stylesheet">
-      
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!--Bootstrap grid and utilities dependencies-->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap-utilities.css">
+
+    <!--Default StyleSheet-->
+    <link href="./resources/css/styles.css" type="text/css" rel="stylesheet"/>
+
     <script type="module" src="scripts/main.js" defer></script>
-
-
     <title>Muhammad Rowaha | Portfolio</title>
   
   </head>
@@ -57,9 +65,9 @@
           </h2>
           <div class="resume-btn" id="resume-btn">
             <h3 class="resume-btn-item">
-              Download My Resume
+              resume
             </h3>
-            <img src="./resources/images/bxs-download.svg" class="resume-btn-item">
+            <img src="./resources/images/bxs-download-green.svg" class="resume-btn-item">
           </div>
         </div>
         <div class="item-2">
@@ -71,11 +79,45 @@
     </div>
 
     <main>
-      <section class="about-me" id="about-me">
-          <h1>About me Test</h1>
-          <a> hello </a>
-      </section>
+      <div class="container">
+          <div class="row" id="about-me">
+              <h1 class="section-heading text-center">
+                About Me<br>
+                <span class="section-sub-heading">INTRO</span>
+              </h1>
+          </div>
+
+          <div class="row flex-md-wrap" id="about-me-info">
+            <div class="col-12 col-md-5 mt-md-4">
+              <h3 class="text-center text-md-start" id="introduce">ENTHUSIASTIC COMPUTER ENGINEERING STUDENT</h3> 
+              <p class="font-content-theme">
+                An enthusiastic B.Sc Computer Engineering Student at <a href="https://w3.bilkent.edu.tr/bilkent/" target="_blank" class="link-info" tool-tip="learn more about Bilkent">
+                Bilkent University<img src="./resources/images/bx-link-external.svg"> </a> 
+                with
+                strong academic and co-curricular achievements. As an undergraduate student,
+                keen to learn about Full Stack development and gain work experience in the
+                software industry
+              </p>
+            </div>
+
+            <div class="col mt-4">
+              <div class="image-container bilkent-img ">
+                  <img src="./resources/images/bilkent-uni.jpg" alt="Bilkent University">
+              </div>
+            </div>
+          </div>
     </main>
+
+    
+    <footer>
+      <small id="copyright">Copyright &copy; Muhammad Rowaha 2022</small>
+    </footer>
+
+
+    <!--Bootstrap JS-->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!--Popper.js | Bootstrap JS dependency-->
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
 
   </body>
   

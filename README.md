@@ -10,9 +10,10 @@ This is the list of the tools i have used for my portfolio website
 1. HTML5
 2. CSS3
 3. Javascript
-4. Git/Github
-5. GitHub Pages
-6. ©Boxicons (SVG icons)
+4. Bootstrap (Popper.js -> Bootstrap.js dependency)
+5. Git/Github
+6. GitHub Pages
+7. ©Boxicons (SVG icons)
 ```
 ____________________________
 

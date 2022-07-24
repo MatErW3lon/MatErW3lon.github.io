@@ -1,0 +1,22 @@
+{
+  "name": "mrowaha.github.io",
+  "version": "1.0.0",
+  "description": "personal portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatErW3lon/MatErW3lon.github.io.git"
+  },
+  "author": "Muhammad Rowaha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatErW3lon/MatErW3lon.github.io/issues"
+  },
+  "homepage": "https://github.com/MatErW3lon/MatErW3lon.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}

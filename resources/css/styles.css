@@ -6,6 +6,7 @@
     --clr-secondary-theme: #31E90D; 
     --clr-role-span: var(--clr-secondary-theme);
     --clr-main-theme : #211F1F;
+    --clr-phrases-theme : #757474;
 }
 
 * {
@@ -18,10 +19,10 @@ body {
 }
 
 main {
+    border-top: 5px solid var(--clr-main-theme);
     position: relative;
     z-index: 10;
-    top: 100vh;
-    background-color: wheat;
+    background-color: #CDFFC2;
 }
 
 a {
@@ -29,14 +30,51 @@ a {
     text-align: center;
 }
 
+/*custom tooltip*/
+a[tool-tip] {
+    position: relative;
+}
+
+a[tool-tip]::after{
+    content: attr(tool-tip);
+    display: block;
+    position: absolute;
+    background-color: var(--clr-phrases-theme);
+    color: white !important;
+    font-size: 0.5em;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+    transform: scale(0);
+    transition: 
+    transform ease-out 150ms,
+    bottom ease-out 150ms;
+}
+
+a[tool-tip]:hover::after {
+    transform: scale(1.0);
+    bottom: 100%;
+}
+
+/*-------------*/
+
+
 .image-container {
     overflow: hidden;
   }
   
-  .image-container img {
-    display: block;
-    max-width: 100%;
-  }
+.image-container img {
+display: block;
+max-width: 100%;
+}
+
+.font-content-theme {
+    font-family: 'Ubuntu', 'Roboto', sans-serif, system-ui;
+    color: var(--clr-main-theme);
+    font-size: clamp(1.25rem, 1.5vw, 1.75rem);
+}
 
 /*Nav Bar Styles*/
 #nav-bar {
@@ -168,6 +206,7 @@ a {
         top : 0;
         bottom : 0;
         right: 0;
+        left: 90%;
     }
 
     #nav-bar .nav-bar-list-desktop-view {
@@ -279,11 +318,10 @@ a {
 
 /*Banner Styles*/
 .banner {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    z-index: -10;
     background-color: var(--clr-main-theme);
     background-image: url("../images/banner-bg.png");
     background-position: center;
@@ -333,7 +371,7 @@ a {
     margin-right: 5vw;
     width: 30%;
     max-width: 400px;
-    min-width: 150px;
+    min-width: 200px;
 }
 
 .container .item-2 img {
@@ -349,28 +387,38 @@ a {
 }
 
 .resume-btn {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--clr-secondary-theme);
     border-radius: 5px;
     width: fit-content;
-    padding: 0.25rem 1.75rem;
+    padding: 0 1rem;
+    transition: background-color 500ms;
+}
+
+.resume-btn:hover {
+    background-color: var(--clr-secondary-theme);
+}
+
+/*animate click*/
+.resume-btn:active {
+    top: 5px;
 }
 
 .resume-btn h3 {
     color: var(--clr-secondary-theme);
     letter-spacing: 5px;
     font-family: 'Cormorant SC', sans-serif, system-ui;
-    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-size: clamp(0.5rem, 1.5vw, 2rem);
+    transition: color 500ms;
 }
 
-.resume-btn h3:after {
-    content: '(Link Below)';
-    display: block;
-    font-size: 0.5em;
-    text-align: center;
+.resume-btn h3:hover {
+    color: white;
 }
+
 
 @media only screen and (max-width: 580px) {
     .banner .container {
@@ -410,12 +458,63 @@ a {
         display: block;
     }
 
+    .resume-btn img {
+        display: none;
+    }
+
 }
 
-/*MAIN BODY*/
-main .about-me{
-    width: 80%;
-    margin: 5rem auto;
-    background-color: blue;
-    height: 1000px;
+/*MAIN BODY STYLES*/
+
+main .container{
+    background-color: white;
+    padding-top: 2.5rem;
+}
+
+.section-heading {
+    font-size: clamp(1.75rem, 3.5vw, 3rem);
+    font-family: 'Montserrat', sans-serif, system-ui;
+    color: var(--clr-main-theme);
+}
+
+.section-sub-heading {
+    color : var(--clr-secondary-theme);
+    font-size: 0.35em;
+    font-family: 'Montserrat', sans-serif, system-ui;
+}
+
+
+
+/*ABOUT ME STYLES*/
+#introduce{
+    font-family: 'Roboto', sans-serif, system-ui;
+    color: var(--clr-phrases-theme);
+}
+
+#introduce::after {
+    content : "|";
+    color: var(--clr-secondary-theme);
+}
+
+.bilkent-img {
+    border: 0.5px solid var(--clr-main-theme);
+    transition: transform 250ms;
+}
+
+.bilkent-img:hover {
+    transform: scale(1.05);
+}
+
+/*Footer Styles*/
+footer {
+    position: sticky;
+    background-color: var(--clr-main-theme);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#copyright {
+    font-family: 'Times New Roman', Times, serif;
 }

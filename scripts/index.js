@@ -52,7 +52,7 @@ button.addEventListener('click', initRoll);
 
 //Banner Roles Cycle
 const rolesElement = document.getElementById('rolesFade');
-const roles = ['Freelancer', 'CS Student', 'FUll Stack Developer'];
+const roles = ['Freelancer', 'CS Student', 'Full Stack Developer'];
 let rolesIndex = 1; // not sure why this works but setting it to zero repeats the 0 index twice
 
 function fadeAnimation(){

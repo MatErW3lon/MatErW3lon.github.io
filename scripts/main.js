@@ -1,3 +1,4 @@
+/*This file has been deprecated in favor of index.js*/
 import {init as bannerAnimation} from './banner-role-animation.js';
 import {init as mobileMenuScroll} from './mobile-menu.js';
 import {init as typingAnimation} from './intro-typing-animation.js';

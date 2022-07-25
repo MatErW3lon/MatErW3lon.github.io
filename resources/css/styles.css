@@ -236,8 +236,8 @@ max-width: 100%;
         /*display : none*/
         display: flex;
         flex-direction: column;
-        background-color: var(--clr-main-theme);
-        border: 1px solid white;
+        background-color: hsl(10, 0%, 100%, 0.5);
+        border: 1px solid var(--clr-main-theme , white);
         border-top: 0;
         border-bottom: 0;
         padding: 0;
@@ -267,9 +267,10 @@ max-width: 100%;
     }
 
     .menu-item a {
-        color: white;
+        color: var(--clr-main-theme);
         text-transform: uppercase;
         font-family: 'Cormorant SC', sans-serif;
+        font-weight: bold;
     }
 
     .menu-item a:where(:hover, :active){
@@ -506,6 +507,10 @@ main .container{
 }
 
 /*Footer Styles*/
+#for-margin {
+    height: 50px;
+}
+
 footer {
     position: sticky;
     background-color: var(--clr-main-theme);

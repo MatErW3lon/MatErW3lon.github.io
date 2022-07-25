@@ -1,3 +1,4 @@
+/*This function is deprecated in favor of web animation api*/
 export function init(){
     const role1 = document.getElementById('role-1');
     const roles = ['CS Student', 'Full Stack Developer', 'Freelancer'];

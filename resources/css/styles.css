@@ -206,7 +206,12 @@ max-width: 100%;
         top : 0;
         bottom : 0;
         right: 0;
-        left: 90%;
+        left: 93%;
+        transition : left 450ms ease-out;
+    }
+
+    #nav-bar[data-visible="true"] {
+        left: 0%;
     }
 
     #nav-bar .nav-bar-list-desktop-view {
@@ -236,14 +241,14 @@ max-width: 100%;
         /*display : none*/
         display: flex;
         flex-direction: column;
-        background-color: hsl(10, 0%, 100%, 0.5);
+        background-color: var(--clr-main-theme);
         border: 1px solid var(--clr-main-theme , white);
         border-top: 0;
         border-bottom: 0;
         padding: 0;
         height: 100%;
         margin-top: 0;
-        width: 0vw;
+        width: 40vw;
         overflow: hidden;
     }
 
@@ -267,7 +272,7 @@ max-width: 100%;
     }
 
     .menu-item a {
-        color: var(--clr-main-theme);
+        color: white;
         text-transform: uppercase;
         font-family: 'Cormorant SC', sans-serif;
         font-weight: bold;
@@ -312,6 +317,20 @@ max-width: 100%;
         display: none;
     }
 
+    @supports (backdrop-filter: blur(2rem)){
+        .menu {
+            background-color: hsl(10, 0%, 100%, 0.5);
+            backdrop-filter: blur(2rem);
+        }
+
+        .menu-item a {
+            color: var(--clr-main-theme);
+        }
+
+        .menu-item a:where(:hover, :active){
+            color: var(--clr-secondary-theme);
+        }
+    }
 }
 
 

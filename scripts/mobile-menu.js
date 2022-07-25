@@ -1,3 +1,4 @@
+/*Deprecated Menu Scroll Function*/
 export function init(){
     
     const button = document.querySelector('.nav-menu');

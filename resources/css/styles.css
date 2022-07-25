@@ -518,3 +518,28 @@ footer {
 #copyright {
     font-family: 'Times New Roman', Times, serif;
 }
+
+/*.role:nth-child(1){ 
+    animation-name: fade; 
+    animation-fill-mode: both; 
+    animation-iteration-count: infinite; 
+    animation-duration: 5s; 
+    animation-direction: alternate-reverse;  
+}
+
+.role:nth-child(2){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+
+@keyframes fade{
+    0%,50% {
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+}*/

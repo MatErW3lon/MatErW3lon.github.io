@@ -55,9 +55,36 @@ setInterval(changeBackgroundColor, 5000);
 
 
 //Banner Scroll
-/*const banner = document.querySelector('.banner');
 const main = document.querySelector('main');
-banner.addEventListener('wheel', () => {
+const viewportHeight = window.innerHeight;
+console.log("viewport height: " + viewportHeight);
+function changeBannerOpacity(){
+    //check if menu is scrolled
+    const visibility = navBarContainer.getAttribute('data-visible');
+    const rect = main.getBoundingClientRect();
+    console.log("Main top: " + rect.top);
+    if(rect.top < viewportHeight - 35){
+        banner.style.opacity = "0.6";
+    }else {
+        banner.style.opacity = "1";
+        if(visibility === "false"){
+            buttonIcon.setAttribute("src", "./resources/images/bx-menu.svg");
+        }else{
+            buttonIcon.setAttribute("src", "./resources/images/bx-right-arrow-alt.svg");
+        }
+    }
+    //check for mobile menu hamburger icon
+    if(rect.top <= 0){
+        if(visibility === "false"){            
+            buttonIcon.setAttribute("src", "./resources/images/bx-menu-black.svg");
+        }else{
+            buttonIcon.setAttribute("src", "./resources/images/bx-right-arrow-alt-black.svg");
+        }
+    }
+
+}
+setInterval(changeBannerOpacity, 25);
+/*banner.addEventListener('wheel', () => {
     banner.style.backgroundColor = 'blue';
 });
 main.addEventListener('wheel', () => {
@@ -100,10 +127,3 @@ function typingAnimation(){
 }
 typingAnimation();
 //---------------------------
-
-
-
-
-
-
-

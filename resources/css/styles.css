@@ -2,7 +2,7 @@
 :root {
     --clr-navbar-background: transparent;
     --clr-navbar-hr: #f8f8f2;
-    --clr-text-theme: #f8f8f2;
+    --clr-dracula-white: #f8f8f2;
     --clr-secondary-theme: #50fa7b; 
     --clr-role-span: var(--clr-secondary-theme);
     --clr-main-theme : #44475a;
@@ -23,6 +23,8 @@ main {
     border-top: 5px solid var(--clr-main-theme);
     position: relative;
     z-index: 10;
+    background-image: url("../images/square-cyan.png");
+    background-repeat: repeat;
     background-color: var(--clr-borders-theme);
 }
 
@@ -41,7 +43,7 @@ a[tool-tip]::after{
     display: block;
     position: absolute;
     background-color: var(--clr-phrases-theme);
-    color: var(--clr-text-theme) !important;
+    color: var(--clr-dracula-white) !important;
     font-size: 0.5em;
     padding: 0.5em 2em;
     border-radius: 5px;
@@ -125,7 +127,7 @@ max-width: 100%;
 }
 
 .nav-bar-item::before {
-    background-color: var(--clr-text-theme);
+    background-color: var(--clr-dracula-white);
     z-index: -2;
 
 }
@@ -171,7 +173,7 @@ max-width: 100%;
     font-size: clamp(0.5rem,1.75vw, 1rem);
     font-family: 'Lato', sans-serif, system-ui;
     text-transform: uppercase;
-    color: var(--clr-text-theme);
+    color: var(--clr-dracula-white);
     transition: color 300ms;
 }
 
@@ -180,7 +182,7 @@ max-width: 100%;
 }
 
 .nav-bar-item a:active {
-    color: var(--clr-text-theme);
+    color: var(--clr-dracula-white);
 }
 
 .nav-bar-item a:focus {
@@ -243,7 +245,7 @@ max-width: 100%;
         display: flex;
         flex-direction: column;
         background-color: var(--clr-main-theme);
-        border: 1px solid var(--clr-main-theme , --clr-text-theme);
+        border: 1px solid var(--clr-main-theme , --clr-dracula-white);
         border-top: 0;
         border-bottom: 0;
         padding: 0;
@@ -273,7 +275,7 @@ max-width: 100%;
     }
 
     .menu-item a {
-        color: var(--clr-text-theme);
+        color: var(--clr-dracula-white);
         text-transform: uppercase;
         font-family: 'Cormorant SC', sans-serif;
         font-weight: bold;
@@ -311,7 +313,7 @@ max-width: 100%;
     }
 
     .menu-item:nth-of-type(5) a:where(:hover, :active) {
-        color: var(--clr-text-theme);
+        color: var(--clr-dracula-white);
     }
 
     #nav-bar #horizontal-rule-aesthetic {
@@ -373,7 +375,7 @@ max-width: 100%;
 
 
 .container .item-1 {
-    color: var(--clr-text-theme);
+    color: var(--clr-dracula-white);
     margin-left: 2vw;
     margin-right: 5vw;
     padding-right: 2vw;
@@ -445,7 +447,7 @@ max-width: 100%;
 }
 
 .resume-btn h3:hover {
-    color: var(--clr-text-theme);
+    color: var(--clr-dracula-white);
 }
 
 
@@ -497,7 +499,7 @@ max-width: 100%;
 /*MAIN BODY STYLES*/
 
 main .container{
-    background-color: var(--clr-text-theme);
+    background-color: var(--clr-dracula-white);
     padding-top: 2.5rem;
 }
 
@@ -518,7 +520,8 @@ main .container{
     background-color: #bd93f9;
     position: absolute;
     left: 1px;
-    width: 1.5em;
+    margin-left: 20px;
+    width: 1em;
     aspect-ratio: 1;
     border-radius: 50%;
     border: 1px solid var(--clr-main-theme);
@@ -565,7 +568,7 @@ main .container{
 footer {
     position: sticky;
     background-color: var(--clr-main-theme);
-    color: var(--clr-text-theme);
+    color: var(--clr-dracula-white);
     display: flex;
     justify-content: center;
     padding: 20px 0;

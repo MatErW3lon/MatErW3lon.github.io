@@ -58,15 +58,22 @@ setInterval(changeBackgroundColor, 5000);
 const main = document.querySelector('main');
 const viewportHeight = window.innerHeight;
 console.log("viewport height: " + viewportHeight);
-function changeBannerOpacity(){
+function onScrollAnimations(){
     //check if menu is scrolled
+    const checkMediaQuery = window.matchMedia('only screen and (max-width:580px)').matches;
     const visibility = navBarContainer.getAttribute('data-visible');
     const rect = main.getBoundingClientRect();
     console.log("Main top: " + rect.top);
     if(rect.top < viewportHeight - 35){
-        banner.style.opacity = "0.6";
+        if (!checkMediaQuery) {
+            navBarContainer.style.backgroundColor = "var(--clr-main-theme)";
+        }
+        banner.setAttribute("scrolled", "true");
     }else {
-        banner.style.opacity = "1";
+        if(!checkMediaQuery){
+            navBarContainer.style.backgroundColor = "transparent";
+        }
+        banner.setAttribute("scrolled", "false");
         if(visibility === "false"){
             buttonIcon.setAttribute("src", "./resources/images/bx-menu.svg");
         }else{
@@ -83,7 +90,7 @@ function changeBannerOpacity(){
     }
 
 }
-setInterval(changeBannerOpacity, 25);
+setInterval(onScrollAnimations, 25);
 /*banner.addEventListener('wheel', () => {
     banner.style.backgroundColor = 'blue';
 });

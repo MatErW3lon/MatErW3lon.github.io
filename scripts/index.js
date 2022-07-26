@@ -17,7 +17,7 @@ button.addEventListener('click', () => {
 
 //Banner Roles Cycle
 const rolesElement = document.getElementById('rolesFade');
-const roles = ['Freelancer', 'CS Student', 'Full Stack Developer'];
+const roles = ['Freelancer', 'Computer Engineering Student', 'Full Stack Developer'];
 let rolesIndex = 1; // not sure why this works but setting it to zero repeats the 0 index twice
 
 function fadeAnimation(){
@@ -40,6 +40,30 @@ function fadeAnimation(){
 }     
 fadeAnimation();
 //------------------------
+
+//Banner background glow
+const banner = document.querySelector('.banner');
+function changeBackgroundColor(){
+    const bgState  = banner.getAttribute('background');
+    if(bgState === 'main'){
+        banner.setAttribute('background', 'secondary');
+    }else if(bgState === 'secondary'){
+        banner.setAttribute('background', 'main');
+    }
+}
+setInterval(changeBackgroundColor, 5000);
+
+
+//Banner Scroll
+/*const banner = document.querySelector('.banner');
+const main = document.querySelector('main');
+banner.addEventListener('wheel', () => {
+    banner.style.backgroundColor = 'blue';
+});
+main.addEventListener('wheel', () => {
+    banner.style.backgroundColor = "yellow";
+})*/
+//---------------
 
 
 //Typing Animation

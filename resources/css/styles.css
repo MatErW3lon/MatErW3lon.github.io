@@ -343,22 +343,31 @@ max-width: 100%;
     left: 0;
     right: 0;
     background-color: var(--clr-main-theme);
-    background-image: url("../images/banner-bg.png");
+    background-image: url("../images/banner-bg-2.png");
     background-position: center;
     background-repeat: repeat;
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    transition: 
+    background-color .5s ease-in-out;
+}
+
+.banner[background="secondary"]{
+    background-color: #072202;
 }
 
 .banner .container {
+    position: relative;
+    left: -65px;
     display: flex;
     align-items: center;
     flex-basis: 100%;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 100%;
     height: 50%;
 }
@@ -373,7 +382,7 @@ max-width: 100%;
 
 .item-1 #main-heading {
     font-family: 'Roboto Mono', sans-serif,  system-ui;
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 4.5vw, 3rem);
 }
 
 .item-1 #main-heading::first-letter {
@@ -382,7 +391,7 @@ max-width: 100%;
 
 .item-1 #main-sub-heading {
     font-family: 'Roboto Mono', sans-serif, system-ui;
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: clamp(1.75rem, 2.75vw, 2.5rem);
 }
 
 .container .item-2 {
@@ -431,7 +440,7 @@ max-width: 100%;
     color: var(--clr-secondary-theme);
     letter-spacing: 5px;
     font-family: 'Cormorant SC', sans-serif, system-ui;
-    font-size: clamp(0.5rem, 1.5vw, 2rem);
+    font-size: clamp(0.5rem, 1.25vw, 2rem);
     transition: color 500ms;
 }
 
@@ -442,6 +451,7 @@ max-width: 100%;
 
 @media only screen and (max-width: 580px) {
     .banner .container {
+        left: 0;
         margin: 0 auto;
         margin-bottom: 2rem;
         flex-direction: column-reverse;

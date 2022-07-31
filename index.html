@@ -173,6 +173,7 @@
                 <h5 class="card-header">Miscellaneous</h5>
                 <ul class="skillset-list">
                     <li>Swing</li>
+                    <li>JDBC</li>
                     <li>Numpy</li>
                     <li>Matplotlib</li>
                     <li>Selenium</li>
@@ -188,19 +189,38 @@
         <div class="headings-container">
           <span class="section-sub-heading">my project highlights</span>
         </div>
-        <div class="container-fluid" id="projects-container">
+        <div class="container-fluid mb-5" id="projects-container">
           <div class="buttons-container">
-              <h5 class="project-button" id="project-btn-1">notes muscle</h5>
-              <h5 class="project-button" id="project-2">portfolio website</h5>
+              <h5 class="project-button" id="project-btn-1" selected="false">notes muscle</h5>
+              <h5 class="project-button" id="project-btn-2" selected="false">portfolio website</h5>
           </div>
-          <div class="row" id="project-data-1">
-              <div class="col-12 col-md-8 mt-md-4 project-logo"></div>
-              <div class="col project-overview"></div>
+          <div class="row project-container" id="project-data-1">
+              <div class="col">
+                <div class="image-container project-logo m-auto">
+                  <img src="./resources/images/notes-muscles.jpg"/> 
+                </div>
+              </div>
+              <div class="col-12 col-md-8 mt-md-4 project-overview text-start">
+                <h1 class="overview-heading">Tools</h1>
+                <ul class="text-start">
+                  <li class="tag">Java</li>
+                  <li class="tag">Swing</li>
+                  <li class="tag">JDBC</li>
+                  <li class="tag">MySql</li>
+                  <li class="tag">Android</li>
+                  <li class="tag">Git/Github</li>
+                </ul>
+                <h1 class="overview-heading">Overview</h1>
+                <p class="font-content-theme">Worked on an android application that enables students at
+                  Bilkent to record lectures and access them in a text format
+                  on their mobile phones. Included input validations, data
+                  security, account management, global chat, notes editing
+                  and sharing. Hosted a physical server, running on a LAN, that
+                  ran a database server, the main server and an OCR server
+                  with our own implementation of ocr libraries</p>
+              </div>
           </div>
         </div>
-
-
-
 
         <hr>
         <div class="row">

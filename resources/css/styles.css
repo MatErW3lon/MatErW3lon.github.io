@@ -64,20 +64,20 @@ a[tool-tip]:hover::after {
 
 /*-------------*/
 
-
 .image-container {
     overflow: hidden;
   }
   
 .image-container img {
 display: block;
-max-width: 100%;
+width: 100%;
+height: 100%;
 }
 
 .font-content-theme {
     font-family: 'Ubuntu', 'Roboto', sans-serif, system-ui;
     color: var(--clr-main-theme);
-    font-size: clamp(1.25rem, 1.5vw, 1.75rem);
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
 }
 
 /*Nav Bar Styles*/
@@ -525,7 +525,7 @@ main .container{
     position: relative;
     display: inline-block;
     isolation: isolate;
-    font-size: clamp(1.75rem, 3.5vw, 3rem);
+    font-size: clamp(1.75rem, 3.25vw, 2.75rem);
     font-family: 'Montserrat', sans-serif, system-ui;
     color: var(--clr-main-theme);
 }
@@ -544,8 +544,8 @@ main .container{
     height: 101%;
     z-index: -1;
     transition: 
-    left ease-in-out 500ms,
-    right ease-in-out 500ms;
+    left ease-in-out 250ms,
+    right ease-in-out 250ms;
 }
 
 .section-heading:hover::before {
@@ -607,7 +607,8 @@ main .container{
 }
 
 .author-img {
-    width: fit-content;
+    margin: 0 auto;
+    width: 350px;
     border: 5px solid var(--clr-borders-theme);
     border-radius: 50%;
     aspect-ratio: 1;
@@ -663,6 +664,7 @@ main .container{
 .buttons-container {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     column-gap: 15px;
 }
@@ -678,6 +680,7 @@ main .container{
     width: fit-content;
     padding: 0.2em 1.5em; 
     white-space: nowrap;
+    margin: 10px 0;
 }
 
 .project-button:where(:hover, :focus) {
@@ -686,7 +689,49 @@ main .container{
     background-color: var(--clr-secondary-theme);
 }
 
+.project-button[selected="true"] {
+    color: var(--clr-dracula-white);
+    background-color: var(--clr-secondary-theme);
+}
 
+.project-container {
+    background-color: white;
+    padding: 20px 0;
+}
+
+.project-logo {
+    width: 300px;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    box-shadow: 2px 2px 1px var(--clr-main-theme);
+}
+
+.project-overview > ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 7.5px;
+    row-gap: 7.5px;
+}
+
+.overview-heading {
+    color: var(--clr-main-theme);
+    font-family: 'Ubuntu', 'Lato', sans-serif, system-ui;
+    font-size: clamp(1.5rem, 2vw, 2.25rem);
+}
+
+.tag {
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    color: var(--clr-dracula-white);
+    padding: 0.2em 1.25em; 
+    border-radius: 4px;
+    background-color: #50fa7b;
+}
 /*Footer Styles*/
 #for-margin {
     height: 50px;

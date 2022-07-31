@@ -20,10 +20,14 @@ ____________________________
 # Folder Structure
 Below is a visual representation of the directories in the project
 ```
-main (holds the config, readme, html)
+main (configs, readme, html)
 |
 |\
-| resources (holds the resources)
+| node_modules (bootstrap and popper.js dependencies)
+|/
+|
+|\
+| resources (stylesheets and media)
 | |
 | |\
 | | css (stylesheet) 
@@ -34,6 +38,6 @@ main (holds the config, readme, html)
 |/
 |
 |\
-| scripts (holds the javascript)
+| scripts (animations code)
 |/
 ```

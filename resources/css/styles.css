@@ -11,7 +11,7 @@
     --clr-dracula-purple : #bd93f9;
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -510,25 +510,70 @@ main .container{
     padding-top: 2.5rem;
 }
 
+.headings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
 .counters {
     counter-reset: section-heading-count;
 }
 
 .section-heading {
     position: relative;
+    display: inline-block;
+    isolation: isolate;
     font-size: clamp(1.75rem, 3.5vw, 3rem);
     font-family: 'Montserrat', sans-serif, system-ui;
     color: var(--clr-main-theme);
 }
 
+.section-heading::before, .section-heading::after{
+    content: '';
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: -20px;
+    right: -20px;
+}
+
 .section-heading::before {
+    background-color: var(--clr-dracula-white);
+    height: 101%;
+    z-index: -1;
+    transition: 
+    left ease-in-out 500ms,
+    right ease-in-out 500ms;
+}
+
+.section-heading:hover::before {
+    left: -80px;
+    right: -80px;
+}
+
+.section-heading::after {
+    background-color: #50fa7b;
+    width: 100vw;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -2;  
+}
+
+.counter{
+    position: relative; 
+    width: 100%;
+}
+
+.counter::before{
     counter-increment: section-heading-count;
     content : counter(section-heading-count);
     background-color: #bd93f9;
     opacity: 0.2;
     position: absolute;
-    left: 1px;
-    margin-left: 20px;
+    margin-right: auto;
     width: 1.5em;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -539,9 +584,14 @@ main .container{
 }
 
 .section-sub-heading {
+    background-color: #75747499;
+    width: 100%;
     color : var(--clr-secondary-theme);
-    font-size: 0.35em;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif, system-ui;
+    text-align: center;
+    text-transform: uppercase;
+    padding : 5px 0;
 }
 
 
@@ -566,6 +616,10 @@ main .container{
 
 .author-img:hover {
     transform: scale(1.05);
+}
+
+#about-me-data {
+    line-height: 2;
 }
 
 /*Skills Styles*/
@@ -606,6 +660,31 @@ main .container{
     font-size: 1.2rem;
 }
 
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 15px;
+}
+
+.project-button {
+    text-transform: capitalize;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    color: var(--clr-secondary-theme);
+    background-color: var(--clr-dracula-white);
+    border: 1px solid var(--clr-secondary-theme);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0.2em 1.5em; 
+    white-space: nowrap;
+}
+
+.project-button:where(:hover, :focus) {
+    cursor: pointer;
+    color: var(--clr-dracula-white);
+    background-color: var(--clr-secondary-theme);
+}
 
 
 /*Footer Styles*/

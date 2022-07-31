@@ -66,7 +66,7 @@ function onScrollAnimations(){
     console.log("Main top: " + rect.top);
     if(rect.top < viewportHeight - 35){
         if (!checkMediaQuery) {
-            navBarContainer.style.backgroundColor = "var(--clr-main-theme)";
+            navBarContainer.style.backgroundColor = "var(--clr-phrases-theme)";
         }
         banner.setAttribute("scrolled", "true");
     }else {

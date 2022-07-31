@@ -88,17 +88,18 @@
 
     <main>
       <div class="container counters">
-          <div class="row" id="about-me">
+          <div class="headings-container" id="about-me">
+            <h3 class="counter" ></h3>
               <h1 class="section-heading text-center">
-                About Me<br>
-                <span class="section-sub-heading">INTRO</span>
+                About Me<br> 
               </h1>
+              <span class="section-sub-heading">get to know me</span>
           </div>
 
           <div class="row flex-md-wrap mb-5" id="about-me-info">
             <div class="col-12 col-md-8 mt-md-4">
               <h3 class="text-center text-md-start" id="introduce">ENTHUSIASTIC COMPUTER ENGINEERING STUDENT</h3> 
-              <p class="font-content-theme">
+              <p class="font-content-theme" id="about-me-data">
                 An enthusiastic B.Sc Computer Engineering Student at <a href="https://w3.bilkent.edu.tr/bilkent/" target="_blank" class="link-info" tool-tip="learn more about Bilkent">
                 Bilkent University<img src="./resources/images/bx-link-external.svg"> </a> 
                 with
@@ -117,11 +118,12 @@
 
           <hr>
 
-          <div class="row mt-5" id="skills">
+          <div class="headings-container" id="skills">
+            <h3 class="counter" ></h3>
             <h1 class="section-heading text-center">
-              Skills<br>
-              <span class="section-sub-heading">Skill Cards</span>
+              Skills<br>   
             </h1>
+            <span class="section-sub-heading">my skills divided by categories</span>
         </div>
 
         <div class="row flex-md-wrap mb-5 mt-5" id="skillsets">
@@ -154,6 +156,7 @@
                     <li>CSS</li>
                     <li>Bootstrap</li>
                     <li>React</li>
+                    <li>JSX</li> 
                     <li>Node</li>
                     <li>MySql</li>
                 </ul>
@@ -172,6 +175,7 @@
                     <li>Swing</li>
                     <li>Numpy</li>
                     <li>Matplotlib</li>
+                    <li>Selenium</li>
                     <li>Mocha</li>
                     <li>SEO</li>
                     <li>Git/Github</li>
@@ -181,6 +185,23 @@
           </div>
           
         </div>
+        <div class="headings-container">
+          <span class="section-sub-heading">my project highlights</span>
+        </div>
+        <div class="container-fluid" id="projects-container">
+          <div class="buttons-container">
+              <h5 class="project-button" id="project-btn-1">notes muscle</h5>
+              <h5 class="project-button" id="project-2">portfolio website</h5>
+          </div>
+          <div class="row" id="project-data-1">
+              <div class="col-12 col-md-8 mt-md-4 project-logo"></div>
+              <div class="col project-overview"></div>
+          </div>
+        </div>
+
+
+
+
         <hr>
         <div class="row">
           <div class="col" id="for-margin"></div>
@@ -199,6 +220,4 @@
     <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
 
   </body>
-  
-
 </html>

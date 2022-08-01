@@ -134,3 +134,49 @@ function typingAnimation(){
 }
 typingAnimation();
 //---------------------------
+
+//Projects
+const projectBtn1 = document.getElementById('project-btn-1');
+const projectBtn2 = document.getElementById('project-btn-2');
+const projectCounts = 2;
+let currVisibleProjectID = 'project-data-1';
+let currProjectBtnID = 'project-btn-1';
+let currVisibleProject = document.getElementById('project-data-1');
+let currProjectNum = 1;
+
+function selectProject(projectNumber) {
+    currVisibleProject.setAttribute('visible', 'false');
+    document.getElementById('project-logo-' + currProjectNum).setAttribute('visible', 'false');
+    document.getElementById('project-overview-' + currProjectNum).setAttribute('visible', 'false');
+    document.getElementById(currProjectBtnID).setAttribute('selected', false);
+    currVisibleProject = document.getElementById(currVisibleProjectID);
+    currVisibleProject.setAttribute('visible', 'true');
+    currProjectNum = projectNumber;
+}
+
+function animateTransition(projectNumber) {
+    let logoID = 'project-logo-' + projectNumber;
+    let logoElement = document.getElementById(logoID);
+    logoElement.setAttribute('visible', 'true');
+
+    let overviewID = 'project-overview-' + projectNumber;
+    let overviewElement = document.getElementById(overviewID);
+    overviewElement.setAttribute('visible', 'true');
+
+}
+
+projectBtn1.addEventListener('click', () => {
+    projectBtn1.setAttribute('selected', 'true');
+    currVisibleProjectID = 'project-data-1';
+    selectProject(1);
+    currProjectBtnID = 'project-btn-1';  
+    setTimeout(animateTransition, 250, 1);  
+});
+
+projectBtn2.addEventListener('click', () => {
+    projectBtn2.setAttribute('selected', 'true');  
+    currVisibleProjectID = 'project-data-2';
+    selectProject(2);
+    currProjectBtnID = 'project-btn-2';
+    setTimeout(animateTransition, 250, 2);
+});

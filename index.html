@@ -99,7 +99,7 @@
           <div class="row flex-md-wrap mb-5" id="about-me-info">
             <div class="col-12 col-md-8 mt-md-4">
               <h3 class="text-center text-md-start" id="introduce">ENTHUSIASTIC COMPUTER ENGINEERING STUDENT</h3> 
-              <p class="font-content-theme" id="about-me-data">
+              <p class="font-content-theme text-center text-md-start" id="about-me-data">
                 An enthusiastic B.Sc Computer Engineering Student at <a href="https://w3.bilkent.edu.tr/bilkent/" target="_blank" class="link-info" tool-tip="learn more about Bilkent">
                 Bilkent University<img src="./resources/images/bx-link-external.svg"> </a> 
                 with
@@ -191,16 +191,20 @@
         </div>
         <div class="container-fluid mb-5" id="projects-container">
           <div class="buttons-container">
-              <h5 class="project-button" id="project-btn-1" selected="false">notes muscle</h5>
+              <h5 class="project-button" id="project-btn-1" selected="true">notes muscle</h5>
               <h5 class="project-button" id="project-btn-2" selected="false">portfolio website</h5>
           </div>
-          <div class="row project-container" id="project-data-1">
+          <div class="row project-container" id="project-data-1" visible="true">
               <div class="col">
-                <div class="image-container project-logo m-auto">
+                <div class="image-container project-logo m-auto" id="project-logo-1" visible="true">
                   <img src="./resources/images/notes-muscles.jpg"/> 
+                  <div class="logo-text">
+                      <h3 class="logo-title">Notes Muscles</h3>
+                      <p class="logo-body">Semester Project</p>
+                  </div>
                 </div>
               </div>
-              <div class="col-12 col-md-8 mt-md-4 project-overview text-start">
+              <div class="col-12 col-md-8 mt-md-4 project-overview text-start" id="project-overview-1" visible="true">
                 <h1 class="overview-heading">Tools</h1>
                 <ul class="text-start">
                   <li class="tag">Java</li>
@@ -220,6 +224,38 @@
                   with our own implementation of ocr libraries</p>
               </div>
           </div>
+          <!---->
+          <div class="row project-container" id="project-data-2" visible="false">
+            <div class="col">
+              <div class="image-container project-logo m-auto" id="project-logo-2" visible="false">
+                <img src="./resources/images/portfolio-website.jpg"/> 
+                <div class="logo-text">
+                  <h3 class="logo-title">Portfolio Website</h3>
+                  <p class="logo-body">Personal Project</p>
+              </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-8 mt-md-4 project-overview text-start" id="project-overview-2" visible="false">
+              <h1 class="overview-heading">Tools</h1>
+              <ul class="text-start">
+                <li class="tag">html</li>
+                <li class="tag">css</li>
+                <li class="tag">bootstrap</li>
+                <li class="tag">Javascript</li>
+                <li class="tag">Github Pages</li>
+                <li class="tag">Git/Github</li>
+              </ul>
+              <h1 class="overview-heading">Overview</h1>
+              <p class="font-content-theme">
+                  Worked on an online portfolio website to showcase my education, projects,
+                  skills and 'contact me' form. The website is made responsive using the bootstrap's
+                  mobile-first grid system and utility classes while most of the styling is implemented
+                  using CSS and animated using Javascript. The website is hosted on Github Pages and 
+                  version controlled using Git
+              </p>
+            </div>
+        </div>
+        <!---->
         </div>
 
         <hr>
